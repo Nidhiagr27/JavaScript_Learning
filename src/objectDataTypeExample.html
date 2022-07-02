@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let person={
+    name:'Nidhi',
+    age:25,
+    gender:'F'
+    };
+    console.log(typeof person);
+    console.log(typeof person.name);
+    console.log(person.name);
+    console.log(person['name']); <!--gives same output as above line-->
+
+    person.city='Mumbai';
+    //person['city']='mumbai'; //gives same output as above line
+    console.log(person.city);
+</script>
+<body>
+
+</body>
+</html>
