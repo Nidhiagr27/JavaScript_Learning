@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let arr=['A','B','C'];
+  console.log(arr);
+  arr.push('D','E','F'); //can push multiple elements at once
+  console.log(arr);
+  let poppedElement=arr.pop();  //push and pop has amortised tie complexity of O(1)
+  console.log(arr);
+  console.log(poppedElement);
+
+  arr.unshift('Q'); //Inserts Q at starting of array, array shifts right
+  console.log(arr);
+  arr.unshift(1); //Inserts 1 at starting of array,array shifts right;  multiple arguments is valid for unshift
+  console.log(arr);
+
+  arr.shift(); //Remove 1st element of array by shifting left; so it will remove 1
+  console.log(arr);
+
+  <!--shift and unshift methods are highly inefficient as it involves sifting of elements-->
+</script>
+</html>
