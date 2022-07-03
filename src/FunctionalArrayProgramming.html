@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let arr=[10,20,30,40,50,60]
+    let element=arr.find(function(item){   //gives 1st element returned by find //function(item) gives true or false
+    if(item%2==0 && item%3==0) return true;
+    else return false;
+    });
+
+    console.log(element);
+
+    let elementIndex=arr.findIndex(function(item){   //gives index of 1st element returned by find //function(item) gives true or false
+    if(item%2==0 && item%3==0) return true;
+    else return false;
+    });
+
+   console.log(elementIndex);
+
+   let arrElements=arr.filter(function(item){   //gives array of elements returned by find //function(item) gives true or false for every element
+    if(item%2==0 && item%3==0) return true;
+    else return false;
+    });
+
+    console.log(arrElements);
+
+</script>
+<body>
+
+</body>
+</html>
