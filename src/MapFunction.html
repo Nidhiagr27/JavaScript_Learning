@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  let arr=[10,20,30,40,50,60]
+  let n=arr.map(function(item){  //.map returns new array as per returned elements of function for each element
+  if(item%2==0 && item %3==0) return item;
+  else return item*10;
+  });
+  console.log(n);
+</script>
+</html>
