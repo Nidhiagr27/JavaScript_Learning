@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+
+    function square(x){
+    console.log('Before return');
+    return x*x;
+    console.log('After return'); //It wont print as it is written after return statement
+
+    //nothing is executed after return statement
+    }
+    let returnedValue=square(5);
+    console.log(returnedValue);
+    console.log(`${returnedValue}`); //both gives same output
+
+    console.log(returnedValue*returnedValue);
+
+
+</script>
+</html>
