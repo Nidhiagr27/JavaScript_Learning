@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function sayHello(){
+    console.log("Inside say Hello function");
+    }
+    sayHello();
+
+    function printMe(name,age){  //function with arguments
+    console.log("Hi! I am "+name+", I am "+age+" years old.");
+    }
+    printMe('Nidhi',28);
+    printMe('Kanha'); //if we don't pass age argument it will show undefined instead of undefined.
+
+    function print(name="Stranger",age=26){  //passing default value of arguments
+    console.log("Hi! I am "+name+", I am "+age+" years old.");
+    }
+    print('Nidhi',28);
+    print('Kanha'); //if we are not passing any argument it will take the default value.
+    print(); //will print default value passed in argument
+</script>
+</html>
