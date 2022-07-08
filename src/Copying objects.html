@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let carA={
+    name:'Model T',
+    brand:'Tesla',
+    year:2021,
+    price:20000,
+    }
+
+    let carB=Object.assign({},carA); //deep copy..copies whole object in carB not reference
+
+    let carC=carA; //here reference is copied //shallow copying
+    console.log( carC);
+
+    let carD={...carA}; //spread operator object is spreaded i.e copied
+    console.log( carD);
+
+    console.log(carC===carA); //outputs true;
+
+    console.log(carB);
+    carB.price=50000;
+    console.log('carB price '+carB.price);
+    console.log('carA price '+carA.price);
+</script>
+</html>
