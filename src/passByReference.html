@@ -12,10 +12,16 @@
     obj.age++;
     console.log('Inside function '+obj.age);
     }
+    function modifyObj2(age){
+    age++;
+    console.log('Inside function 2 '+age);
+    }
     let obj={
     age:10
     }
+    modifyObj2(obj.age); //outputs 11
     modifyObj(obj); //outputs 11 as we are passing object and no copy is created.
+    modifyObj2(obj.age); //outputs 12
     console.log('Outside function '+obj.age); //outputs 11
 
 </script>
