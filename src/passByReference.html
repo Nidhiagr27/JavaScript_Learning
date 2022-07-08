@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function modifyObj(obj){
+    obj.age++;
+    console.log('Inside function '+obj.age);
+    }
+    let obj={
+    age:10
+    }
+    modifyObj(obj); //outputs 11 as we are passing object and no copy is created.
+    console.log('Outside function '+obj.age); //outputs 11
+
+</script>
+</html>
