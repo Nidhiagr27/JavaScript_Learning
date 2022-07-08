@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+
+  function Person(name,age){
+  this.name=name;
+  this.age=age;
+  this.isAdult=function(){
+  if(this.age>=18) return true;
+  else return false;
+  }
+  this.greet=function(){
+  console.log('Hi! I am '+this.name);
+  }
+  }
+
+  let personA=new Person('Pratik',26);
+  let personB=new Person('Ayush',24);
+  let personC=new Person('Nidhi',28);
+
+  personA.greet();
+  console.log(personB.isAdult());
+
+</script>
+</html>
