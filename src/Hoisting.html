@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    //Variable hoisting
+    console.log(a); //will give undefined not error because of hoisting //only can happen if var is used in variable defining not let
+    var a='Hello'; //declared and initialized
+    let b='bye'; //it will be hoisted but it will still give error if we try to access it before
+    console.log(a); //will give output as Hello
+
+    //console.log(b); //will give error as b is not defined
+
+    //function hoisting
+    hello();
+    function hello(){
+        console.log('Hello inside the function');
+    }
+</script>
+</html>
