@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function createcounter(){
+    let counter=0;
+    function inc(){
+      counter++;
+      console.log('value of counter is ' + counter);
+    }
+    function dec(){
+        counter--;
+        console.log('value of counter is' + counter);
+    }
+    return{
+        inc:inc,
+        dec:dec
+    }
+  }
+
+  let counterObj=createcounter();
+  console.log(counterObj);
+  counterObj.inc();
+  counterObj.inc();
+  createcounter().dec();// giving output as -1
+  counterObj.inc();
+  counterObj.dec();
+
+</script>
+</html>

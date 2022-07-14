@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function outerFunc(){
+        let x=10;
+        function innerFunc(){
+            console.log(x+10);
+        }
+        return innerFunc;
+    }
+    let fuc=outerFunc();
+    fuc();
+</script>
+</html>

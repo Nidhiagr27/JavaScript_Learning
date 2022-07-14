@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  let proto1={
+      hello:function(){
+          console.log("Hello");
+      }
+  };
+  let proto2={
+      bye:function (){
+          console.log("Bye!!! from proto2");
+      }
+  }
+  let obj={
+      name:'Nidhi',
+      hi:function (){
+          console.log('Hello world!!');
+      },
+      bye:function(){ //overiding bye function
+          console.log('Bye from obj');
+      }
+  };
+  Object.setPrototypeOf(proto2,proto1); /*setting proto1 as prototype of proto2*/
+  Object.setPrototypeOf(obj,proto2); /*setting proto2 as prototype of obj*/
+  obj.hello(); //prints hello
+  obj.bye(); //prints bye //will print bye from obj
+  console.log(Object.getPrototypeOf(obj));
+
+  //to check whether the property is object's own or is of prototype
+  console.log(Object.hasOwn(obj,'hello')); //check wheather hello() is there in object or in its protype
+  console.log(Object.hasOwn(obj,'name'));
+  console.log(Object.hasOwn(obj,'hi')); //prints true
+
+  console.log(obj.hasOwnProperty('name')); //prints true
+</script>
+</html>
