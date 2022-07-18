@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let timerId=window.setTimeout(function (){
+        console.log('Hi from setTimeout!!!');
+    },5000);
+
+    let intervalId=window.setInterval(function (){console.log('Hi from set Interval!!!!')},1000);
+
+    function stopTimer(){
+        window.clearTimeout(timerId);
+    }
+    function stopInterval(){
+        window.clearInterval(intervalId);
+    }
+</script>
+<body>
+<input type="button" value="stop timer" onclick="stopTimer()">
+<input type="button" value="stop Interval" onclick="stopInterval()">
+</body>
+</html>
