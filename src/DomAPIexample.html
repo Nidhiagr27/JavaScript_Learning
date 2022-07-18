@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Illustrating DOM</title>
+    <script>
+        let n=0;
+        function changeText(){
+         let element=document.getElementById('para1');
+         element.innerText=`Button has been clicked ${n} number of times`;
+         n++;
+        }
+        function mofifyTitle(){
+            document.title='New Title';
+        }
+
+        let count=0;
+        function changeBackground(){
+            if(count%2==0) {
+                document.body.style.background = 'Green';
+                count++;
+            }
+            else{
+                document.body.style.background = 'White';
+                count++;
+            }
+        }
+        console.log('Title of the page is-'+ document.title);
+
+    </script>
+</head>
+
+<body>
+<input type="button" value="Modify Title" onclick="mofifyTitle()">
+<input type="button" value="Change background" onclick="changeBackground()">
+<input type="button" value="Modify Text" onclick="changeText()">
+<p id="para1">I am paragrapgh number 1</p>
+<p id="para2">I am paragraph #2</p>
+
+</body>
+</html>

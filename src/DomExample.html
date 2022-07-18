@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let count=0;
+    function changeColor(){
+        let elements=document.getElementsByTagName("li"); //will give list of elements in list
+        elements[count].style.color='blue';
+        count++;
+    }
+    let index=0;
+    function addItem(){
+        let elements=document.getElementsByTagName("li");
+        let lastElement=elements[elements.length-1];
+        let newElement=document.createElement('li');
+        newElement.innerText=`List item ${elements.length+1}`;
+        lastElement.append(newElement);
+
+    }
+</script>
+<body>
+<ol>
+    <input type="button" value="Add item" onclick="addItem()">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    <li>List item 5</li>
+    <input type="button" value="Change color" onclick="changeColor()" >
+</ol>
+</body>
+</html>
