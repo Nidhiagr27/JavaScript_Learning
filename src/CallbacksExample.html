@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+  function downloadFile(fileUrl){
+      let req=new XMLHttpRequest();  //this is asynchronous
+      req.open('GET',fileUrl,true);
+      return req.response;
+  }
+
+  function downloadFile(fileUrl,callbackFuncton){
+      let req=new XMLHttpRequest();  //this is asynchronous
+      req.open('GET',fileUrl,true);
+      //this onload handler runs when request is finished
+      req.onload=function (event){
+          callbackFuncton(req.response);
+      };
+      req.send();
+  }
+
+  function doSomethingWithFile(fileContents){
+      console.log('Inside callback fnction');
+      console.log(fileContents);
+  }
+  let fileUrl='https://prepfortech-test.s3.ap-south-1.amazonaws.com/sample3.txt'; //block 1
+  let fileContents=downloadFile(fileUrl,doSomethingWithFile); //block 2
+  /*doSomethingWithFile(fileContents); *///block 3
+  console.log('I am in 4th block'); //block 4
+
+
+</script>
+<body>
+
+</body>
+</html>
